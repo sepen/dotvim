@@ -10,6 +10,11 @@ if [ ! -d ~/.vim_swp ]; then
   mkdir ~/.vim_swp
 fi
 
+if [ ! -d "$PWD"/vim ]; then
+  echo "Creating vim directory."
+  mkdir "$PWD"/vim
+fi
+
 echo "Creating vim symlinks"
 ln -nsf "$PWD"/vimrc ~/.vimrc
 ln -nsf "$PWD"/vim ~/.vim
